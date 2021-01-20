@@ -1,0 +1,191 @@
+{
+  "name": "Fournisseur",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numeroRegistreCommerce",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "piecejointe",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "activite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adressecomptable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adressedirigeant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autredenomination",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autreformejuridique",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bpcomptable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bpdeux",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bptrois",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bpun",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bpsecondaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "centreimpot",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comptable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dirigeant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "enseigne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etssecondaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "insae",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "formejuridique",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "proprietairesiege",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quartier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroenregistrement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serviceencharge",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "siege",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sigle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telcomptable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "teldeux",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "teldirigeant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telsecondaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "teltrois",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telun",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ville",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typedge",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "utilisateurLogin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fax",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "catFournisseur",
+      "otherEntityRelationshipName": "fournisseur",
+      "relationshipName": "catFournisseur",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101240",
+  "javadoc": "TABLE FOURNISSEUR",
+  "entityTableName": "fournisseur",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

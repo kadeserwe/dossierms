@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity AppelOffre.
+    -->
+    <changeSet id="20210113095740-1" author="jhipster">
+        <createTable tableName="appel_offre">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="apo_datecreation" type="date">
+                <constraints nullable="false" />
+            </column>
+            <column name="apo_date_autorisation" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_date_demande_autorisation" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_date_rejet" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_date_mise_autorisation" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_stop_procedure" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_affectation_dossier" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_date_pv_ouverturepli" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_date_versement" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_pub_liste_restreinte" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_projet" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_objet" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_reference" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="ux_appel_offre_apo_reference" />
+            </column>
+            <column name="apo_numero_pret_credit" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_commentaire_autorisation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_fichier_mise_autorisation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="numero_marche" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="motif_stop_procedure" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_fichier_pv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_fichier_validation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_autorisation_prealable" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_fichier_autorisation_prealable" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_reference_requete_ac" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_rapport_special" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_reference_communication" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_releve_conseil" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_fichier_rapport_special" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_fichier_releve_conseil" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pub_liste_restreinte" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fichier_liste_restreinte" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_montant_estime" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_montant_versement" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_responsable_dcmp" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="etat_seuil" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_statut" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_valide" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_nbre_dao" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_nbre_dc" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="apo_etat_validation" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="autirite_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="realisation_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="modepassation_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="typemarche_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="modeselection_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="categorie_appel_offre_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210113095740-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210113095740-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/appel_offre.csv"
+                  separator=";"
+                  tableName="appel_offre">
+            <column name="id" type="numeric"/>
+            <column name="apo_datecreation" type="date"/>
+            <column name="apo_date_autorisation" type="date"/>
+            <column name="apo_date_demande_autorisation" type="date"/>
+            <column name="apo_date_rejet" type="date"/>
+            <column name="apo_date_mise_autorisation" type="date"/>
+            <column name="date_stop_procedure" type="date"/>
+            <column name="date_affectation_dossier" type="date"/>
+            <column name="apo_date_pv_ouverturepli" type="date"/>
+            <column name="apo_date_versement" type="date"/>
+            <column name="date_pub_liste_restreinte" type="date"/>
+            <column name="apo_projet" type="string"/>
+            <column name="apo_objet" type="string"/>
+            <column name="apo_reference" type="string"/>
+            <column name="apo_numero_pret_credit" type="string"/>
+            <column name="apo_commentaire_autorisation" type="string"/>
+            <column name="apo_fichier_mise_autorisation" type="string"/>
+            <column name="numero_marche" type="string"/>
+            <column name="motif_stop_procedure" type="string"/>
+            <column name="apo_fichier_pv" type="string"/>
+            <column name="apo_fichier_validation" type="string"/>
+            <column name="apo_autorisation_prealable" type="string"/>
+            <column name="apo_fichier_autorisation_prealable" type="string"/>
+            <column name="apo_reference_requete_ac" type="string"/>
+            <column name="apo_rapport_special" type="string"/>
+            <column name="apo_reference_communication" type="string"/>
+            <column name="apo_releve_conseil" type="string"/>
+            <column name="apo_fichier_rapport_special" type="string"/>
+            <column name="apo_fichier_releve_conseil" type="string"/>
+            <column name="pub_liste_restreinte" type="string"/>
+            <column name="fichier_liste_restreinte" type="string"/>
+            <column name="apo_montant_estime" type="numeric"/>
+            <column name="apo_montant_versement" type="numeric"/>
+            <column name="apo_responsable_dcmp" type="numeric"/>
+            <column name="etat_seuil" type="numeric"/>
+            <column name="apo_statut" type="string"/>
+            <column name="apo_valide" type="string"/>
+            <column name="apo_nbre_dao" type="numeric"/>
+            <column name="apo_nbre_dc" type="numeric"/>
+            <column name="apo_etat_validation" type="numeric"/>
+            <column name="autirite_id" type="numeric"/>
+            <column name="realisation_id" type="numeric"/>
+            <column name="modepassation_id" type="numeric"/>
+            <column name="typemarche_id" type="numeric"/>
+            <column name="modeselection_id" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

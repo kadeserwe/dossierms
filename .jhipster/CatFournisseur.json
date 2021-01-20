@@ -1,0 +1,27 @@
+{
+  "name": "CatFournisseur",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210113100140",
+  "javadoc": "TABLE CATFOURNISSEUR",
+  "entityTableName": "cat_fournisseur",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

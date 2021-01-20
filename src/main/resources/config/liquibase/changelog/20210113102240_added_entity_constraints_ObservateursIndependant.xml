@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity ObservateursIndependant.
+    -->
+    <changeSet id="20210113102240-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="observateurs_independant"
+                                 constraintName="fk_observateurs_independant_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Fournisseur.
+    -->
+    <changeSet id="20210113101240-1" author="jhipster">
+        <createTable tableName="fournisseur" remarks="TABLE FOURNISSEUR">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nom" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="adresse" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="telephone" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="numero_registre_commerce" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="piecejointe" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="activite" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="adressecomptable" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="adressedirigeant" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="autredenomination" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="autreformejuridique" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bpcomptable" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bpdeux" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bptrois" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bpun" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bpsecondaire" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="centreimpot" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="comptable" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dirigeant" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="enseigne" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="etssecondaire" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="insae" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="formejuridique" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="proprietairesiege" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="quartier" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="numeroenregistrement" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="serviceencharge" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="siege" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sigle" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="telcomptable" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="teldeux" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="teldirigeant" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="telsecondaire" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="teltrois" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="telun" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ville" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="typedge" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="utilisateur_login" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fax" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cat_fournisseur_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210113101240-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210113101240-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/fournisseur.csv"
+                  separator=";"
+                  tableName="fournisseur">
+            <column name="id" type="numeric"/>
+            <column name="nom" type="string"/>
+            <column name="adresse" type="string"/>
+            <column name="email" type="string"/>
+            <column name="telephone" type="numeric"/>
+            <column name="numero_registre_commerce" type="numeric"/>
+            <column name="piecejointe" type="string"/>
+            <column name="code" type="string"/>
+            <column name="activite" type="string"/>
+            <column name="adressecomptable" type="string"/>
+            <column name="adressedirigeant" type="string"/>
+            <column name="autredenomination" type="string"/>
+            <column name="autreformejuridique" type="string"/>
+            <column name="bpcomptable" type="string"/>
+            <column name="bpdeux" type="string"/>
+            <column name="bptrois" type="string"/>
+            <column name="bpun" type="string"/>
+            <column name="bpsecondaire" type="string"/>
+            <column name="centreimpot" type="string"/>
+            <column name="comptable" type="string"/>
+            <column name="dirigeant" type="string"/>
+            <column name="enseigne" type="string"/>
+            <column name="etssecondaire" type="string"/>
+            <column name="insae" type="string"/>
+            <column name="formejuridique" type="string"/>
+            <column name="proprietairesiege" type="string"/>
+            <column name="quartier" type="string"/>
+            <column name="numeroenregistrement" type="string"/>
+            <column name="serviceencharge" type="string"/>
+            <column name="siege" type="string"/>
+            <column name="sigle" type="string"/>
+            <column name="telcomptable" type="string"/>
+            <column name="teldeux" type="string"/>
+            <column name="teldirigeant" type="string"/>
+            <column name="telsecondaire" type="string"/>
+            <column name="teltrois" type="string"/>
+            <column name="telun" type="string"/>
+            <column name="ville" type="string"/>
+            <column name="typedge" type="string"/>
+            <column name="type" type="string"/>
+            <column name="utilisateur_login" type="string"/>
+            <column name="fax" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

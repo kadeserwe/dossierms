@@ -1,0 +1,27 @@
+{
+  "name": "Critere",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210113100340",
+  "javadoc": "TABLE Critere",
+  "entityTableName": "critere",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

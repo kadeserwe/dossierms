@@ -1,0 +1,27 @@
+{
+  "name": "MonnaieOffre",
+  "fields": [
+    {
+      "fieldName": "monCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "monLibelle",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210113101940",
+  "javadoc": "TABLE Monnaieoffre",
+  "entityTableName": "monnaie_offre",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

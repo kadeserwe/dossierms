@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity CritereQualifiSoum.
+    -->
+    <changeSet id="20210113100440-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="critere_qualifi_soum"
+                                 constraintName="fk_critere_qualifi_soum_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="plis_ouverture_id"
+                                 baseTableName="critere_qualifi_soum"
+                                 constraintName="fk_critere_qualifi_soum_plis_ouverture_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plis_ouverture"/>
+
+        <addForeignKeyConstraint baseColumnNames="lot_id"
+                                 baseTableName="critere_qualifi_soum"
+                                 constraintName="fk_critere_qualifi_soum_lot_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lot"/>
+
+        <addForeignKeyConstraint baseColumnNames="dossiers_sosuscritere_id"
+                                 baseTableName="critere_qualifi_soum"
+                                 constraintName="fk_critere_qualifi_soum_dossiers_sosuscritere_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossiers_souscritere"/>
+
+    </changeSet>
+</databaseChangeLog>

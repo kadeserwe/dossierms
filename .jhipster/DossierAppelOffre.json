@@ -1,0 +1,252 @@
+{
+  "name": "DossierAppelOffre",
+  "fields": [
+    {
+      "fieldName": "dosLieuDepotDossier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosReference",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique", "required"]
+    },
+    {
+      "fieldName": "dosAdresseRetrait",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosConditionAcquistion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosAllotissement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosLotDivisible",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentaireMiseValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentaireValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosFichierValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentairePublicationProvisoire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentairesPublicationDefinitive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentairePublication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentSignature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosRefSignature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosRefApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosDateDebutRetrait",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateLimiteDepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosHeurelimitedepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateCreation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateRejet",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDatePublicationProvisoire",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDatePublicationDefinitive",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateDemandePublication",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosCommentaireDemandePublication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosFichierDemandePublication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosLieuAcquisitionDAO",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telechargerDAO",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dosDateOuvertueDesplis",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosHeureOuvertureDesPlis",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDatePublication",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosFicchierPublication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autiriteId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dosMontantGarantie",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dosMontantDao",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dosMontantEstime",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dosIncidents",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateRemiseDossierTechnique",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateLimiteDossierTechnique",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "commentaireDelaiTechnique",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosDateMiseValidationAttribution",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosEtatValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosBordereau",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosFichierMiseValidationPrequalif",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosfichierSignature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosDateSignature",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateMiseValidationSignature",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateAttributionDefinitive",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosDateDemandeApprobation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosCommentDemandeApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosDateNotification",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dosCommentNotification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosRefNotification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosFichierNotification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dosCommentaireAttributionDefinitive",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "appelOffre",
+      "otherEntityRelationshipName": "dossierAppelOffre",
+      "relationshipName": "appelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100740",
+  "entityTableName": "dossier_appel_offre",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

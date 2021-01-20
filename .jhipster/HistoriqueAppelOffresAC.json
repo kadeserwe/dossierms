@@ -1,0 +1,99 @@
+{
+  "name": "HistoriqueAppelOffresAC",
+  "fields": [
+    {
+      "fieldName": "histoacValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoacCommentaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoacFichiervalidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoacBorderau",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoCommentaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoFichiervalidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "daoFichier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "origine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "histoacDatevalidation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "histoacDatecreationdossier",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "histoDatevalidation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "histoacAttribution",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "histoacAc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "validerparNom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "validerparPrenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "autiriteId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "historiqueAppelOffresAC",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101540",
+  "javadoc": "TABLE HistoriqueappeloffresAC",
+  "entityTableName": "historique_appel_offres_ac",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

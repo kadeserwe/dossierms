@@ -1,0 +1,104 @@
+{
+  "name": "MembresCommissionsMarche",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fonction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gestion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statut",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typeMembre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "arrete",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierArrete",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photo",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "origine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etapePI",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "flagPresident",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "actif",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "position",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reconduit",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "autoriteId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "membre",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dateArrete",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210113101840",
+  "javadoc": "TABLE MembresCommissionsMarche",
+  "entityTableName": "membres_commissions_marche",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

@@ -1,0 +1,198 @@
+{
+  "name": "LotsSoumissionnaire",
+  "fields": [
+    {
+      "fieldName": "raisonsociale",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numero",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commentaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lotsoumis",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lotrecu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elimine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montantOffert",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantDefinitif",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantGarantie",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantTVA",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantDouane",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantTTC",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "rabais",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "rang",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "scoreTechnique",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreFinancier",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "prixEvalue",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreTechniquePondere",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreFinancierPondere",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreFinal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dateDepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "classementGeneral",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "classemenTechnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatPreselection",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatExamenPreliminaire",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "critereQualification",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "attributaireProvisoire",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "plilValide",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lettreSoumission",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "offreTechnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "offreFinanciere",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "plinumero",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "lotsSoumissionnaire",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "lotsSoumissionnaire",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "lotsSoumissionnaire",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "monnaieOffre",
+      "otherEntityRelationshipName": "lotsSoumissionnaire",
+      "relationshipName": "monnaieOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "naturePrix",
+      "otherEntityRelationshipName": "lotsSoumissionnaire",
+      "relationshipName": "naturePrix",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "pays",
+      "otherEntityRelationshipName": "lotsSoumissionnaire",
+      "relationshipName": "pays",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101740",
+  "javadoc": "TABLE LotsSoumissionnaire",
+  "entityTableName": "lots_soumissionnaire",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

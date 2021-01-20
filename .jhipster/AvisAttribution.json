@@ -1,0 +1,74 @@
+{
+  "name": "AvisAttribution",
+  "fields": [
+    {
+      "fieldName": "attriObjet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attriType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attritexte",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attriRef",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attrifichier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attriRaisonsocial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attriDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "attridatepublication",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "attriPub",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "autiriteId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "avisAttribution",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "avisAttribution",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113095940",
+  "javadoc": "TABLE AvisAttribution",
+  "entityTableName": "avis_attribution",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

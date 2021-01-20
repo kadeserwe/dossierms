@@ -1,0 +1,69 @@
+{
+  "name": "RetraitRegistreDAO",
+  "fields": [
+    {
+      "fieldName": "nomSoumissionnaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "modePaiement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ninea",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montantVerse",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dateRetrait",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "retraitRegistreDAO",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fournisseur",
+      "otherEntityRelationshipName": "retraitRegistreDAO",
+      "relationshipName": "fournisseur",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "pays",
+      "otherEntityRelationshipName": "retraitRegistreDAO",
+      "relationshipName": "pays",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113103040",
+  "javadoc": "TABLE RetraitRegistreDAO",
+  "entityTableName": "retrait_registre_dao",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

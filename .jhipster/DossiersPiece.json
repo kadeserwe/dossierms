@@ -1,0 +1,33 @@
+{
+  "name": "DossiersPiece",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "dossiersPiece",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "piece",
+      "otherEntityRelationshipName": "dossiersPiece",
+      "relationshipName": "piece",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101040",
+  "javadoc": "TABLE Dossierspiece",
+  "entityTableName": "dossiers_piece",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

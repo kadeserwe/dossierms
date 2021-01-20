@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity LotsSoumissionnaire.
+    -->
+    <changeSet id="20210113101740-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="lots_soumissionnaire"
+                                 constraintName="fk_lots_soumissionnaire_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="lot_id"
+                                 baseTableName="lots_soumissionnaire"
+                                 constraintName="fk_lots_soumissionnaire_lot_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lot"/>
+
+        <addForeignKeyConstraint baseColumnNames="plis_ouverture_id"
+                                 baseTableName="lots_soumissionnaire"
+                                 constraintName="fk_lots_soumissionnaire_plis_ouverture_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plis_ouverture"/>
+
+        <addForeignKeyConstraint baseColumnNames="monnaie_offre_id"
+                                 baseTableName="lots_soumissionnaire"
+                                 constraintName="fk_lots_soumissionnaire_monnaie_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="monnaie_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="nature_prix_id"
+                                 baseTableName="lots_soumissionnaire"
+                                 constraintName="fk_lots_soumissionnaire_nature_prix_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nature_prix"/>
+
+        <addForeignKeyConstraint baseColumnNames="pays_id"
+                                 baseTableName="lots_soumissionnaire"
+                                 constraintName="fk_lots_soumissionnaire_pays_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pays"/>
+
+    </changeSet>
+</databaseChangeLog>

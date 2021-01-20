@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity TachesEffectue.
+    -->
+    <changeSet id="20210113103140-1" author="jhipster">
+        <createTable tableName="taches_effectue" remarks="TABLE APPEL D&apos;OFFRE">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="allotissement" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="garantie" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="piece_administrative" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="critere_qualification" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="devise" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="financement" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="registre_retrait" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="registre_depot" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="lots_soumis" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="commissions_passation" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="representants_soumis" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="services_techniques" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="observateurs" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="garantie_soum" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="pieces_soumis" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="lecture_offre" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="commission_tecnique" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="document" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="examen_garantie" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="examen_exhaustivite" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="examen_signature_offre" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="examen_conformite" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="verification_critere" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="attribution_provisoire" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="terme_reference" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="depot_candidature" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="preselection" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="notification" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="commissions_passation_pi" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="representants_soumis_pi" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="notes_technique" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="offres_financiere" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="prix_evalue" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="registre_depot_pi" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="critere_provenance" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="proces_verbale" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="dossier_appel_offre_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210113103140-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210113103140-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/taches_effectue.csv"
+                  separator=";"
+                  tableName="taches_effectue">
+            <column name="id" type="numeric"/>
+            <column name="allotissement" type="numeric"/>
+            <column name="garantie" type="numeric"/>
+            <column name="piece_administrative" type="numeric"/>
+            <column name="critere_qualification" type="numeric"/>
+            <column name="devise" type="numeric"/>
+            <column name="financement" type="numeric"/>
+            <column name="registre_retrait" type="numeric"/>
+            <column name="registre_depot" type="numeric"/>
+            <column name="lots_soumis" type="numeric"/>
+            <column name="commissions_passation" type="numeric"/>
+            <column name="representants_soumis" type="numeric"/>
+            <column name="services_techniques" type="numeric"/>
+            <column name="observateurs" type="numeric"/>
+            <column name="garantie_soum" type="numeric"/>
+            <column name="pieces_soumis" type="numeric"/>
+            <column name="lecture_offre" type="numeric"/>
+            <column name="commission_tecnique" type="numeric"/>
+            <column name="document" type="numeric"/>
+            <column name="examen_garantie" type="numeric"/>
+            <column name="examen_exhaustivite" type="numeric"/>
+            <column name="examen_signature_offre" type="numeric"/>
+            <column name="examen_conformite" type="numeric"/>
+            <column name="verification_critere" type="numeric"/>
+            <column name="attribution_provisoire" type="numeric"/>
+            <column name="terme_reference" type="numeric"/>
+            <column name="depot_candidature" type="numeric"/>
+            <column name="preselection" type="numeric"/>
+            <column name="notification" type="numeric"/>
+            <column name="commissions_passation_pi" type="numeric"/>
+            <column name="representants_soumis_pi" type="numeric"/>
+            <column name="notes_technique" type="numeric"/>
+            <column name="offres_financiere" type="numeric"/>
+            <column name="prix_evalue" type="numeric"/>
+            <column name="registre_depot_pi" type="numeric"/>
+            <column name="critere_provenance" type="numeric"/>
+            <column name="proces_verbale" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Attribution.
+    -->
+    <changeSet id="20210113095840-1" author="jhipster">
+        <createTable tableName="attribution" remarks="TABLE Attribution">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="reference_plande_passation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="reference_avis_general" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="attributaire_provisoire" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="commentaire" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="commentaire_definitif" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nom_fichier_def" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="attri_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="montant_marche" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="montantdefinitif" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mois_execution" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="semaine_execution" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="jours_execution" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_publication_provisoire" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_publication_definitive" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dateattribution" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dossier_appel_offre_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="plis_ouverture_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="lot_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210113095840-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210113095840-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/attribution.csv"
+                  separator=";"
+                  tableName="attribution">
+            <column name="id" type="numeric"/>
+            <column name="reference_plande_passation" type="string"/>
+            <column name="reference_avis_general" type="string"/>
+            <column name="attributaire_provisoire" type="string"/>
+            <column name="commentaire" type="string"/>
+            <column name="commentaire_definitif" type="string"/>
+            <column name="nom_fichier_def" type="string"/>
+            <column name="attri_type" type="string"/>
+            <column name="montant_marche" type="numeric"/>
+            <column name="montantdefinitif" type="numeric"/>
+            <column name="mois_execution" type="numeric"/>
+            <column name="semaine_execution" type="numeric"/>
+            <column name="jours_execution" type="numeric"/>
+            <column name="date_publication_provisoire" type="date"/>
+            <column name="date_publication_definitive" type="date"/>
+            <column name="dateattribution" type="date"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

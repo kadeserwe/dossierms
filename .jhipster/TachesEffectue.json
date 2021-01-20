@@ -1,0 +1,171 @@
+{
+  "name": "TachesEffectue",
+  "fields": [
+    {
+      "fieldName": "allotissement",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "garantie",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "pieceAdministrative",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "critereQualification",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "devise",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "financement",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "registreRetrait",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "registreDepot",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lotsSoumis",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "commissionsPassation",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "representantsSoumis",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "servicesTechniques",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "observateurs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "garantieSoum",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "piecesSoumis",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lectureOffre",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "commissionTecnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "document",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "examenGarantie",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "examenExhaustivite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "examenSignatureOffre",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "examenConformite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "verificationCritere",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "attributionProvisoire",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "termeReference",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "depotCandidature",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "preselection",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "notification",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "commissionsPassationPI",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "representantsSoumisPI",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "notesTechnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "offresFinanciere",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "prixEvalue",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "registreDepotPI",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "critereProvenance",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "procesVerbale",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "tachesEffectue",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113103140",
+  "javadoc": "TABLE APPEL D'OFFRE",
+  "entityTableName": "taches_effectue",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

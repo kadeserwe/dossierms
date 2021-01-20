@@ -1,0 +1,124 @@
+{
+  "name": "Document",
+  "fields": [
+    {
+      "fieldName": "typeDocument",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "textPVOuverture",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomFichier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reference",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "objet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "origine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lieuAcquisitionDAO",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierDemandePublication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierDC",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierAR",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heure",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateDemandePublication",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateLimiteDepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heureLimiteDepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateOuvertueDesplis",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heureOuvertureDesPlis",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "autoriteId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "document",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "appelOffre",
+      "otherEntityRelationshipName": "document",
+      "relationshipName": "appelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "document",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "document",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100640",
+  "entityTableName": "document",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

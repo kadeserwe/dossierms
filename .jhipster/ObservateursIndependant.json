@@ -1,0 +1,47 @@
+{
+  "name": "ObservateursIndependant",
+  "fields": [
+    {
+      "fieldName": "representant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qualite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "presence",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateConvocation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "etape",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "observateursIndependant",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113102240",
+  "javadoc": "TABLE ObservateursIndependant",
+  "entityTableName": "observateurs_independant",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

@@ -1,0 +1,53 @@
+{
+  "name": "PiecesPlisOuverture",
+  "fields": [
+    {
+      "fieldName": "etat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etatConforme",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "piecesPlisOuverture",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "piecesPlisOuverture",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "piece",
+      "otherEntityRelationshipName": "piecesPlisOuverture",
+      "relationshipName": "piece",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113102540",
+  "javadoc": "TABLE Piecesplisouverture",
+  "entityTableName": "pieces_plis_ouverture",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

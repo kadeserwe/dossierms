@@ -14,7 +14,67 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113095740_added_entity_AppelOffre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113095840_added_entity_Attribution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113095940_added_entity_AvisAttribution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100040_added_entity_CategorieAppelOffre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100140_added_entity_CatFournisseur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100240_added_entity_Contrat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100340_added_entity_Critere.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100440_added_entity_CritereQualifiSoum.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100540_added_entity_Devise.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100640_added_entity_Document.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100740_added_entity_DossierAppelOffre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100840_added_entity_DossiersCommissionsMarche.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100940_added_entity_DossiersEvaluateur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101040_added_entity_DossiersPiece.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101140_added_entity_DossiersSouscritere.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101240_added_entity_Fournisseur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101340_added_entity_GarantiesDossier.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101440_added_entity_GarantiesSoumissionnaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101540_added_entity_HistoriqueAppelOffresAC.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101640_added_entity_Lot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101740_added_entity_LotsSoumissionnaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101840_added_entity_MembresCommissionsMarche.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101940_added_entity_MonnaieOffre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102040_added_entity_NaturePrix.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102140_added_entity_NaturesGarantie.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102240_added_entity_ObservateursIndependant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102340_added_entity_Pays.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102440_added_entity_Piece.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102540_added_entity_PiecesPlisOuverture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102640_added_entity_PiecesRecus.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102740_added_entity_PlisOuverture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102840_added_entity_PresenceOuverture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102940_added_entity_RepresentantServTech.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113103040_added_entity_RetraitRegistreDAO.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113103140_added_entity_TachesEffectue.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210113095740_added_entity_constraints_AppelOffre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113095840_added_entity_constraints_Attribution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113095940_added_entity_constraints_AvisAttribution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100240_added_entity_constraints_Contrat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100440_added_entity_constraints_CritereQualifiSoum.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100540_added_entity_constraints_Devise.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100640_added_entity_constraints_Document.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100740_added_entity_constraints_DossierAppelOffre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100840_added_entity_constraints_DossiersCommissionsMarche.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113100940_added_entity_constraints_DossiersEvaluateur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101040_added_entity_constraints_DossiersPiece.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101140_added_entity_constraints_DossiersSouscritere.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101240_added_entity_constraints_Fournisseur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101340_added_entity_constraints_GarantiesDossier.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101440_added_entity_constraints_GarantiesSoumissionnaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101540_added_entity_constraints_HistoriqueAppelOffresAC.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101640_added_entity_constraints_Lot.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113101740_added_entity_constraints_LotsSoumissionnaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102240_added_entity_constraints_ObservateursIndependant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102540_added_entity_constraints_PiecesPlisOuverture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102740_added_entity_constraints_PlisOuverture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102840_added_entity_constraints_PresenceOuverture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113102940_added_entity_constraints_RepresentantServTech.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113103040_added_entity_constraints_RetraitRegistreDAO.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210113103140_added_entity_constraints_TachesEffectue.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

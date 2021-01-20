@@ -1,0 +1,68 @@
+{
+  "name": "GarantiesSoumissionnaire",
+  "fields": [
+    {
+      "fieldName": "fournie",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "observations",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libellelot",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montant",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "garantiesSoumissionnaire",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "garantiesDossier",
+      "otherEntityRelationshipName": "garantiesSoumissionnaire",
+      "relationshipName": "garantiesDossier",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "garantiesSoumissionnaire",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "naturesGarantie",
+      "otherEntityRelationshipName": "garantiesSoumissionnaire",
+      "relationshipName": "naturesGarantie",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101440",
+  "javadoc": "TABLE GarantiesSoumissionnaire",
+  "entityTableName": "garanties_soumissionnaire",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

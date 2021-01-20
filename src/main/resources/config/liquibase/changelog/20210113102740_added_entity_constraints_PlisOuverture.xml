@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity PlisOuverture.
+    -->
+    <changeSet id="20210113102740-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="plis_ouverture"
+                                 constraintName="fk_plis_ouverture_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="retrait_registredao_id"
+                                 baseTableName="plis_ouverture"
+                                 constraintName="fk_plis_ouverture_retrait_registredao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="retrait_registre_dao"/>
+
+        <addForeignKeyConstraint baseColumnNames="fournisseur_id"
+                                 baseTableName="plis_ouverture"
+                                 constraintName="fk_plis_ouverture_fournisseur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fournisseur"/>
+
+    </changeSet>
+</databaseChangeLog>

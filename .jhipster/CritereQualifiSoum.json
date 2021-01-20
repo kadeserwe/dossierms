@@ -1,0 +1,60 @@
+{
+  "name": "CritereQualifiSoum",
+  "fields": [
+    {
+      "fieldName": "conforme",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelleLot",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "critereQualifiSoum",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "critereQualifiSoum",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "critereQualifiSoum",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossiersSouscritere",
+      "otherEntityRelationshipName": "critereQualifiSoum",
+      "relationshipName": "dossiersSosuscritere",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100440",
+  "javadoc": "TABLE CriteresQualificationsSoumissionnaire",
+  "entityTableName": "critere_qualifi_soum",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

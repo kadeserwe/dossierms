@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity GarantiesSoumissionnaire.
+    -->
+    <changeSet id="20210113101440-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="garanties_soumissionnaire"
+                                 constraintName="fk_garanties_soumissionnaire_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="garanties_dossier_id"
+                                 baseTableName="garanties_soumissionnaire"
+                                 constraintName="fk_garanties_soumissionnaire_garanties_dossier_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="garanties_dossier"/>
+
+        <addForeignKeyConstraint baseColumnNames="plis_ouverture_id"
+                                 baseTableName="garanties_soumissionnaire"
+                                 constraintName="fk_garanties_soumissionnaire_plis_ouverture_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plis_ouverture"/>
+
+        <addForeignKeyConstraint baseColumnNames="natures_garantie_id"
+                                 baseTableName="garanties_soumissionnaire"
+                                 constraintName="fk_garanties_soumissionnaire_natures_garantie_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="natures_garantie"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,42 @@
+{
+  "name": "DossiersCommissionsMarche",
+  "fields": [
+    {
+      "fieldName": "flagPresenceEvaluation",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etapePI",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "dossiersCommissionsMarche",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "membresCommissionsMarche",
+      "otherEntityRelationshipName": "dossiersCommissionsMarche",
+      "relationshipName": "membresCommissionsMarche",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100840",
+  "javadoc": "TABLE Dossierscommissionsmarche",
+  "entityTableName": "dossiers_commissions_marche",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

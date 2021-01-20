@@ -1,0 +1,45 @@
+{
+  "name": "DossiersSouscritere",
+  "fields": [
+    {
+      "fieldName": "note",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "dossiersSouscritere",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "dossiersSouscritere",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "critere",
+      "otherEntityRelationshipName": "dossiersSouscritere",
+      "relationshipName": "critere",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101140",
+  "javadoc": "TABLE CriteresQualificationsSoumissionnaire",
+  "entityTableName": "dossiers_souscritere",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

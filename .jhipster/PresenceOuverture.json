@@ -1,0 +1,73 @@
+{
+  "name": "PresenceOuverture",
+  "fields": [
+    {
+      "fieldName": "supplementaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomRepresentant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenomRepresentant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomStructure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qualite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etapePI",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "presenceOuverture",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "appelOffre",
+      "otherEntityRelationshipName": "presenceOuverture",
+      "relationshipName": "appelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "presenceOuverture",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113102840",
+  "javadoc": "TABLE Presenceouverture",
+  "entityTableName": "presence_ouverture",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

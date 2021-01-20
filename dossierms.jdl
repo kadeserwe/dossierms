@@ -1,0 +1,722 @@
+entity AppelOffre {
+  apoDatecreation LocalDate required,
+  apoDateAutorisation LocalDate,
+  apoDateDemandeAutorisation LocalDate,
+  apoDateRejet LocalDate,
+  apoDateMiseAutorisation LocalDate,
+  dateStopProcedure LocalDate,
+  dateAffectationDossier LocalDate,
+  apoDatePVOuverturepli LocalDate,
+  apoDateVersement LocalDate,
+  datePubListeRestreinte LocalDate,
+  apoProjet String,
+  apoObjet String,
+  apoReference String unique required,
+  apoNumeroPretCredit String,
+  apoCommentaireAutorisation String,
+  apoFichierMiseAutorisation String,
+  numeroMarche String,
+  motifStopProcedure String,
+  apoFichierPV String,
+  apoFichierValidation String,
+  apoAutorisationPrealable String,
+  apoFichierAutorisationPrealable String,
+  apoReferenceRequeteAc String,
+  apoRapportSpecial String,
+  apoReferenceCommunication String,
+  apoReleveConseil String,
+  apoFichierRapportSpecial String,
+  apoFichierReleveConseil String,
+  pubListeRestreinte String,
+  fichierListeRestreinte String,
+  apoMontantEstime BigDecimal,
+  apoMontantVersement BigDecimal,
+  apoResponsableDCMP Integer,
+  etatSeuil Integer,
+  apoStatut String,
+  apoValide String,
+  apoNbreDAO Integer,
+  apoNbreDC Integer,
+  apoEtatValidation Integer,
+  autiriteId Long required,
+  realisationId Long required,
+  modepassationId Long,
+  typemarcheId Long,
+  modeselectionId Long
+}
+/**
+ * TABLE Attribution
+ */
+entity Attribution {
+  referencePlandePassation String,
+  referenceAvisGeneral String,
+  attributaireProvisoire String,
+  commentaire String,
+  commentaireDefinitif String,
+  nomFichierDef String,
+  attriType String,
+  montantMarche BigDecimal,
+  montantdefinitif BigDecimal,
+  moisExecution Integer,
+  semaineExecution Integer,
+  joursExecution Integer,
+  datePublicationProvisoire LocalDate,
+  datePublicationDefinitive LocalDate,
+  dateattribution LocalDate
+}
+/**
+ * TABLE AvisAttribution
+ */
+entity AvisAttribution {
+  attriObjet String,
+  attriType String,
+  attritexte String,
+  attriRef String,
+  attrifichier String,
+  attriRaisonsocial String,
+  attriDate LocalDate,
+  attridatepublication LocalDate,
+  attriPub Integer,
+  autiriteId Long
+}
+entity CategorieAppelOffre {
+  libelle String,
+  niveau Integer
+}
+/**
+ * TABLE CATFOURNISSEUR
+ */
+entity CatFournisseur {
+  libelle String,
+  description String
+}
+/**
+ * TABLE CONTRAT
+ */
+entity Contrat {
+  montant BigDecimal,
+  montantVerse BigDecimal,
+  conDateSignature LocalDate,
+  conDateApprobation LocalDate,
+  conDateNotification LocalDate,
+  conDateRecepProvisoire LocalDate,
+  conDateRecepDefinitive LocalDate,
+  conDateOrdreDemarrage LocalDate,
+  condateAttributionProvisoire LocalDate,
+  condateAttributionDefinitive LocalDate,
+  conDatePaiement LocalDate,
+  dateDemandeImmatriculation LocalDate,
+  dateImmatriculation LocalDate,
+  datePub LocalDate,
+  dateDemandePubContrat LocalDate,
+  conDateCreation LocalDate,
+  renouvcontDateDemandeAutorisation LocalDate,
+  renouvcontDateautorisation LocalDate,
+  renouvcontDateDemandeExamenJuridique LocalDate,
+  renouvcontDateExamenJuridique LocalDate,
+  renouvcontDateDemandeApprobation LocalDate,
+  renouvcontDateApprobation LocalDate,
+  renouvcontDateRejet LocalDate,
+  renouvcontDateRetourApprobation LocalDate,
+  conCommentSignature String,
+  conRefSignature String,
+  conCommentApprobation String,
+  conRefApprobation String,
+  conCommentNotification String,
+  conRefNotification String,
+  conFichierRecepProvisoire String,
+  conCommentRecepProvisoire String,
+  conFichierRecepDefinitive String,
+  conCommentRecepDefinitive String,
+  conFichierOrdreDemarrage String,
+  conCommentOrdreDemarrage String,
+  conRefAttributionProvisoire String,
+  conCommentaireAttributionProvisoire String,
+  conRefAttributionDefinitive String,
+  conCommentaireAttributionDefinitive String,
+  conStatut String,
+  numMatriculation String,
+  conCommentaireDmdmat String,
+  conCommentaireMatriculation String,
+  concSituation String,
+  nationnalite String,
+  fichierImmatricule String,
+  fichierJustificatif String,
+  commentairePub String,
+  fichierContrat String,
+  conCommentDemandePub String,
+  renouvcontFichierAutorisationPrealable String,
+  renouvcontFichierExamenJuridique String,
+  renouvcontFichierContratSigne String,
+  renouvcontFichierPageGarde String,
+  renouvcontFichierPageSignature String,
+  renouvcontFichierRapportMotivation String,
+  renouvcontFichierProjetContrat String,
+  renouvcontCommentAutorisation String,
+  renouvcontCommentDemandeApprobation String,
+  renouvcontCommentExamenJuridique String,
+  autoriteId Long,
+  serviceId Long,
+  modePassationId Long,
+  typeMarcheId Long,
+  immatriculation Integer,
+  delai Integer,
+  renouvcontImmatStatut Boolean,
+  renouvcontPubStatut Boolean,
+  renouvcontAutorisationStatut Integer,
+  renouvcontExamenJuridiqueStatut Integer,
+  renouvcontApprobationStatut Integer,
+  etatContratdebase String,
+  libelleLot String
+}
+/**
+ * TABLE Critere
+ */
+entity Critere {
+  libelle String,
+  autoriteId Long
+}
+/**
+ * TABLE CriteresQualificationsSoumissionnaire
+ */
+entity CritereQualifiSoum {
+  conforme Integer,
+  libelle String,
+  libelleLot String
+}
+/**
+ * TABLE DEVISE
+ */
+entity Devise {
+  devTauxConversion BigDecimal
+}
+entity Document {
+  typeDocument String,
+  textPVOuverture String,
+  nomFichier String,
+  libelle String,
+  reference String,
+  objet String,
+  origine String,
+  lieuAcquisitionDAO String,
+  fichierDemandePublication String,
+  fichierDC String,
+  fichierAR String,
+  date LocalDate,
+  heure LocalDate,
+  dateDemandePublication LocalDate,
+  dateLimiteDepot LocalDate,
+  heureLimiteDepot LocalDate,
+  dateOuvertueDesplis LocalDate,
+  heureOuvertureDesPlis LocalDate,
+  autoriteId Long required
+}
+entity DossierAppelOffre {
+  dosLieuDepotDossier String,
+  dosReference String unique required,
+  dosAdresseRetrait String,
+  dosConditionAcquistion String,
+  dosAllotissement String,
+  dosLotDivisible String,
+  dosCommentaireMiseValidation String,
+  dosCommentaireValidation String,
+  dosFichierValidation String,
+  dosCommentairePublicationProvisoire String,
+  dosCommentairesPublicationDefinitive String,
+  dosCommentairePublication String,
+  dosCommentSignature String,
+  dosRefSignature String,
+  dosCommentApprobation String,
+  dosRefApprobation String,
+  dosDateDebutRetrait LocalDate,
+  dosDateLimiteDepot LocalDate,
+  dosHeurelimitedepot LocalDate,
+  dosDateCreation LocalDate,
+  dosDateRejet LocalDate,
+  dosDatePublicationProvisoire LocalDate,
+  dosDatePublicationDefinitive LocalDate,
+  dosDateDemandePublication LocalDate,
+  dosCommentaireDemandePublication String,
+  dosFichierDemandePublication String,
+  dosLieuAcquisitionDAO String,
+  telechargerDAO Integer,
+  dosDateOuvertueDesplis LocalDate,
+  dosHeureOuvertureDesPlis LocalDate,
+  dosDatePublication LocalDate,
+  dosFicchierPublication String,
+  autiriteId Long required,
+  dosMontantGarantie BigDecimal,
+  dosMontantDao BigDecimal,
+  dosMontantEstime BigDecimal,
+  dosIncidents String,
+  dateRemiseDossierTechnique LocalDate,
+  dateLimiteDossierTechnique LocalDate,
+  commentaireDelaiTechnique String,
+  dosDateMiseValidationAttribution LocalDate,
+  dosEtatValidation String,
+  dosBordereau String,
+  dosFichierMiseValidationPrequalif String,
+  dosfichierSignature String,
+  dosDateSignature LocalDate,
+  dosDateMiseValidationSignature LocalDate,
+  dosDateAttributionDefinitive LocalDate,
+  dosDateDemandeApprobation LocalDate,
+  dosCommentDemandeApprobation String,
+  fichierApprobation String,
+  dosDateNotification LocalDate,
+  dosCommentNotification String,
+  dosRefNotification String,
+  dosFichierNotification String,
+  dosCommentaireAttributionDefinitive String
+}
+/**
+ * TABLE Dossierscommissionsmarche
+ */
+entity DossiersCommissionsMarche {
+  flagPresenceEvaluation Integer,
+  etapePI Integer
+}
+/**
+ * TABLE DossiersEvaluateur
+ */
+entity DossiersEvaluateur {
+  commission String,
+  nom String,
+  prenom String,
+  telephone Integer,
+  email String,
+  fonction String,
+  dateRemise LocalDate,
+  dateLimite LocalDate
+}
+/**
+ * TABLE Dossierspiece
+ */
+entity DossiersPiece
+/**
+ * TABLE CriteresQualificationsSoumissionnaire
+ */
+entity DossiersSouscritere {
+  note BigDecimal
+}
+/**
+ * TABLE FOURNISSEUR
+ */
+entity Fournisseur {
+  nom String,
+  adresse String,
+  email String,
+  telephone Integer,
+  numeroRegistreCommerce Integer,
+  piecejointe String,
+  code String,
+  activite String,
+  adressecomptable String,
+  adressedirigeant String,
+  autredenomination String,
+  autreformejuridique String,
+  bpcomptable String,
+  bpdeux String,
+  bptrois String,
+  bpun String,
+  bpsecondaire String,
+  centreimpot String,
+  comptable String,
+  dirigeant String,
+  enseigne String,
+  etssecondaire String,
+  insae String,
+  formejuridique String,
+  proprietairesiege String,
+  quartier String,
+  numeroenregistrement String,
+  serviceencharge String,
+  siege String,
+  sigle String,
+  telcomptable String,
+  teldeux String,
+  teldirigeant String,
+  telsecondaire String,
+  teltrois String,
+  telun String,
+  ville String,
+  typedge String,
+  type String,
+  utilisateurLogin String,
+  fax String
+}
+/**
+ * TABLE GARANTIE
+ */
+entity GarantiesDossier {
+  pourcentage BigDecimal,
+  montant BigDecimal,
+  autiriteId Long
+}
+/**
+ * TABLE GarantiesSoumissionnaire
+ */
+entity GarantiesSoumissionnaire {
+  fournie String,
+  libelle String,
+  observations String,
+  libellelot String,
+  montant BigDecimal
+}
+/**
+ * TABLE HistoriqueappeloffresAC
+ */
+entity HistoriqueAppelOffresAC {
+  histoacValidation String,
+  histoacCommentaire String,
+  histoacFichiervalidation String,
+  histoacBorderau String,
+  histoValidation String,
+  histoCommentaire String,
+  histoFichiervalidation String,
+  daoFichier String,
+  origine String,
+  histoacDatevalidation LocalDate,
+  histoacDatecreationdossier LocalDate,
+  histoDatevalidation LocalDate,
+  histoacAttribution Integer,
+  histoacAc Integer,
+  validerparNom String,
+  validerparPrenom String,
+  userId Long,
+  autiriteId Long
+}
+/**
+ * TABLE LOT
+ */
+entity Lot {
+  libelle String,
+  numero String,
+  commentaire String,
+  montant BigDecimal,
+  montantdao BigDecimal
+}
+/**
+ * TABLE LotsSoumissionnaire
+ */
+entity LotsSoumissionnaire {
+  raisonsociale String,
+  numero String,
+  email String,
+  commentaire String,
+  lotsoumis String,
+  lotrecu String,
+  libelle String,
+  elimine String,
+  montantOffert BigDecimal,
+  montantDefinitif BigDecimal,
+  montantGarantie BigDecimal,
+  montantTVA BigDecimal,
+  montantDouane BigDecimal,
+  montantTTC BigDecimal,
+  rabais Integer,
+  rang Integer,
+  scoreTechnique BigDecimal,
+  scoreFinancier BigDecimal,
+  prixEvalue BigDecimal,
+  scoreTechniquePondere BigDecimal,
+  scoreFinancierPondere BigDecimal,
+  scoreFinal BigDecimal,
+  dateDepot LocalDate,
+  classementGeneral Integer,
+  classemenTechnique Integer,
+  etatPreselection Integer,
+  etatExamenPreliminaire Integer,
+  critereQualification Integer,
+  attributaireProvisoire Integer,
+  plilValide Integer,
+  lettreSoumission Integer,
+  offreTechnique Integer,
+  offreFinanciere Integer,
+  plinumero Integer
+}
+/**
+ * TABLE MembresCommissionsMarche
+ */
+entity MembresCommissionsMarche {
+  nom String,
+  prenom String,
+  fonction String,
+  telephone String,
+  email String,
+  gestion String,
+  statut String,
+  typeMembre String,
+  arrete String,
+  fichierArrete String,
+  photo ImageBlob,
+  type String,
+  origine String,
+  etapePI Integer,
+  flagPresident Integer,
+  actif Integer,
+  position Integer,
+  reconduit Integer,
+  autoriteId Long,
+  membre Long,
+  dateArrete LocalDate
+}
+/**
+ * TABLE Monnaieoffre
+ */
+entity MonnaieOffre {
+  monCode String,
+  monLibelle String
+}
+/**
+ * TABLE Natureprix
+ */
+entity NaturePrix {
+  natCode String,
+  natLibelle String
+}
+entity NaturesGarantie {
+  libelle String
+}
+/**
+ * TABLE ObservateursIndependant
+ */
+entity ObservateursIndependant {
+  representant String,
+  qualite String,
+  presence String,
+  dateConvocation LocalDate,
+  etape Integer
+}
+/**
+ * TABLE Pays
+ */
+entity Pays {
+  libelle String,
+  codePays String
+}
+/**
+ * TABLE PIECE
+ */
+entity Piece {
+  libelle String,
+  description String,
+  codepiece String,
+  localisation String,
+  type Integer,
+  autoriteId Long
+}
+/**
+ * TABLE Piecesplisouverture
+ */
+entity PiecesPlisOuverture {
+  etat String,
+  libelle String,
+  etatConforme String
+}
+/**
+ * TABLE PIECERECUS
+ */
+entity PiecesRecus {
+  libelle String,
+  description String,
+  garantie Integer
+}
+/**
+ * TABLE PlisOuverture
+ */
+entity PlisOuverture {
+  raisonSociale String,
+  adresseMail String,
+  commentaire String,
+  rang String,
+  ninea String,
+  natCode String,
+  monCode String,
+  pvOffreFinanciere String,
+  negociation String,
+  montantOffert BigDecimal,
+  scoreFinancier BigDecimal,
+  prixEvalue BigDecimal,
+  scoreTechniquePondere BigDecimal,
+  scoreFinancierPondere BigDecimal,
+  scoreFinal BigDecimal,
+  montantDefinitif BigDecimal,
+  montantTVA BigDecimal,
+  montantDouane BigDecimal,
+  dateDepot LocalDate,
+  heuredepot LocalDate,
+  rabais Integer,
+  scoreTechnique Integer,
+  seuilAtteint Integer,
+  classemenTechnique Integer,
+  classementGeneral Integer,
+  candidatRestreintID Integer,
+  etatPreselection Integer,
+  etatExamenPreliminaire Integer,
+  critereQualification Integer,
+  attributaireProvisoire Integer,
+  offreTechnique Integer,
+  offreFinanciere Integer,
+  lettreSoumission Integer,
+  valide Integer,
+  numero Integer,
+  garantie Integer,
+  pieceRequise Integer,
+  observationsOffres String,
+  observationsCandidats String,
+  modeReception String,
+  notifie String,
+  signatureOffre String,
+  exhaustivite String,
+  garantieSoumission String,
+  conformite String,
+  critereProvenance String,
+  notePreselectionne BigDecimal,
+  autoriteId Long,
+  ajustement Long
+}
+/**
+ * TABLE Presenceouverture
+ */
+entity PresenceOuverture {
+  supplementaire String,
+  email String,
+  telephone String,
+  nomRepresentant String,
+  prenomRepresentant String,
+  nomStructure String,
+  qualite String,
+  etapePI Integer
+}
+/**
+ * TABLE RepresentantsServicesTechnique
+ */
+entity RepresentantServTech {
+  representant String,
+  qualite String,
+  presence String,
+  dateConvocation LocalDate,
+  etape Integer
+}
+/**
+ * TABLE RetraitRegistreDAO
+ */
+entity RetraitRegistreDAO {
+  nomSoumissionnaire String,
+  telephone String,
+  email String,
+  modePaiement String,
+  ninea String,
+  montantVerse BigDecimal,
+  dateRetrait LocalDate
+}
+/**
+ * TABLE APPEL D'OFFRE
+ */
+entity TachesEffectue {
+  allotissement Integer,
+  garantie Integer,
+  pieceAdministrative Integer,
+  critereQualification Integer,
+  devise Integer,
+  financement Integer,
+  registreRetrait Integer,
+  registreDepot Integer,
+  lotsSoumis Integer,
+  commissionsPassation Integer,
+  representantsSoumis Integer,
+  servicesTechniques Integer,
+  observateurs Integer,
+  garantieSoum Integer,
+  piecesSoumis Integer,
+  lectureOffre Integer,
+  commissionTecnique Integer,
+  document Integer,
+  examenGarantie Integer,
+  examenExhaustivite Integer,
+  examenSignatureOffre Integer,
+  examenConformite Integer,
+  verificationCritere Integer,
+  attributionProvisoire Integer,
+  termeReference Integer,
+  depotCandidature Integer,
+  preselection Integer,
+  notification Integer,
+  commissionsPassationPI Integer,
+  representantsSoumisPI Integer,
+  notesTechnique Integer,
+  offresFinanciere Integer,
+  prixEvalue Integer,
+  registreDepotPI Integer,
+  critereProvenance Integer,
+  procesVerbale Integer
+}
+relationship ManyToOne {
+  AppelOffre{categorieAppelOffre} to CategorieAppelOffre,
+  Attribution{dossierAppelOffre} to DossierAppelOffre,
+  Attribution{plisOuverture} to PlisOuverture,
+  Attribution{lot} to Lot,
+  AvisAttribution{dossierAppelOffre} to DossierAppelOffre,
+  AvisAttribution{lot} to Lot,
+  Contrat{dossierAppelOffre} to DossierAppelOffre,
+  Contrat{lot} to Lot,
+  Contrat{fournisseur} to Fournisseur,
+  Contrat{plisOuverture} to PlisOuverture,
+  CritereQualifiSoum{dossierAppelOffre} to DossierAppelOffre,
+  CritereQualifiSoum{plisOuverture} to PlisOuverture,
+  CritereQualifiSoum{lot} to Lot,
+  CritereQualifiSoum{dossiersSosuscritere} to DossiersSouscritere,
+  Devise{dossierAppelOffre} to DossierAppelOffre,
+  Devise{monnaieOffre} to MonnaieOffre,
+  Document{dossierAppelOffre} to DossierAppelOffre,
+  Document{appelOffre} to AppelOffre,
+  Document{plisOuverture} to PlisOuverture,
+  Document{lot} to Lot,
+  DossierAppelOffre{appelOffre} to AppelOffre,
+  DossiersCommissionsMarche{dossierAppelOffre} to DossierAppelOffre,
+  DossiersCommissionsMarche{membresCommissionsMarche} to MembresCommissionsMarche,
+  DossiersEvaluateur{dossierAppelOffre} to DossierAppelOffre,
+  DossiersPiece{dossierAppelOffre} to DossierAppelOffre,
+  DossiersPiece{piece} to Piece,
+  DossiersSouscritere{dossierAppelOffre} to DossierAppelOffre,
+  DossiersSouscritere{lot} to Lot,
+  DossiersSouscritere{critere} to Critere,
+  Fournisseur{catFournisseur} to CatFournisseur,
+  GarantiesDossier{dossierAppelOffre} to DossierAppelOffre,
+  GarantiesDossier{lot} to Lot,
+  GarantiesDossier{piecesRecus} to PiecesRecus,
+  GarantiesSoumissionnaire{dossierAppelOffre} to DossierAppelOffre,
+  GarantiesSoumissionnaire{garantiesDossier} to GarantiesDossier,
+  GarantiesSoumissionnaire{plisOuverture} to PlisOuverture,
+  GarantiesSoumissionnaire{naturesGarantie} to NaturesGarantie,
+  HistoriqueAppelOffresAC{dossierAppelOffre} to DossierAppelOffre,
+  Lot{dossierAppelOffre} to DossierAppelOffre,
+  LotsSoumissionnaire{dossierAppelOffre} to DossierAppelOffre,
+  LotsSoumissionnaire{lot} to Lot,
+  LotsSoumissionnaire{plisOuverture} to PlisOuverture,
+  LotsSoumissionnaire{monnaieOffre} to MonnaieOffre,
+  LotsSoumissionnaire{naturePrix} to NaturePrix,
+  LotsSoumissionnaire{pays} to Pays,
+  ObservateursIndependant{dossierAppelOffre} to DossierAppelOffre,
+  PiecesPlisOuverture{dossierAppelOffre} to DossierAppelOffre,
+  PiecesPlisOuverture{plisOuverture} to PlisOuverture,
+  PiecesPlisOuverture{piece} to Piece,
+  PlisOuverture{dossierAppelOffre} to DossierAppelOffre,
+  PlisOuverture{retraitRegistreDAO} to RetraitRegistreDAO,
+  PlisOuverture{fournisseur} to Fournisseur,
+  PresenceOuverture{dossierAppelOffre} to DossierAppelOffre,
+  PresenceOuverture{appelOffre} to AppelOffre,
+  PresenceOuverture{plisOuverture} to PlisOuverture,
+  RepresentantServTech{dossierAppelOffre} to DossierAppelOffre,
+  RetraitRegistreDAO{dossierAppelOffre} to DossierAppelOffre,
+  RetraitRegistreDAO{fournisseur} to Fournisseur,
+  RetraitRegistreDAO{pays} to Pays,
+  TachesEffectue{dossierAppelOffre} to DossierAppelOffre
+}
+
+dto AppelOffre, Attribution, AvisAttribution, CategorieAppelOffre, CatFournisseur, Contrat, Critere, CritereQualifiSoum, Devise, Document, DossierAppelOffre, DossiersCommissionsMarche, DossiersEvaluateur, DossiersPiece, DossiersSouscritere, Fournisseur, GarantiesDossier, GarantiesSoumissionnaire, HistoriqueAppelOffresAC, Lot, LotsSoumissionnaire, MembresCommissionsMarche, MonnaieOffre, NaturePrix, NaturesGarantie, ObservateursIndependant, Pays, Piece, PiecesPlisOuverture, PiecesRecus, PlisOuverture, PresenceOuverture, RepresentantServTech, RetraitRegistreDAO, TachesEffectue with mapstruct
+paginate AppelOffre, Attribution, AvisAttribution, CategorieAppelOffre, CatFournisseur, Contrat, Critere, CritereQualifiSoum, Devise, Document, DossierAppelOffre, DossiersCommissionsMarche, DossiersEvaluateur, DossiersPiece, DossiersSouscritere, Fournisseur, GarantiesDossier, GarantiesSoumissionnaire, HistoriqueAppelOffresAC, Lot, LotsSoumissionnaire, MembresCommissionsMarche, MonnaieOffre, NaturePrix, NaturesGarantie, ObservateursIndependant, Pays, Piece, PiecesPlisOuverture, PiecesRecus, PlisOuverture, PresenceOuverture, RepresentantServTech, RetraitRegistreDAO, TachesEffectue with pagination
+service AppelOffre, Attribution, AvisAttribution, CategorieAppelOffre, CatFournisseur, Contrat, Critere, CritereQualifiSoum, Devise, Document, DossierAppelOffre, DossiersCommissionsMarche, DossiersEvaluateur, DossiersPiece, DossiersSouscritere, Fournisseur, GarantiesDossier, GarantiesSoumissionnaire, HistoriqueAppelOffresAC, Lot, LotsSoumissionnaire, MembresCommissionsMarche, MonnaieOffre, NaturePrix, NaturesGarantie, ObservateursIndependant, Pays, Piece, PiecesPlisOuverture, PiecesRecus, PlisOuverture, PresenceOuverture, RepresentantServTech, RetraitRegistreDAO, TachesEffectue with serviceImpl
+microservice AppelOffre, Attribution, AvisAttribution, CategorieAppelOffre, CatFournisseur, Contrat, Critere, CritereQualifiSoum, Devise, Document, DossierAppelOffre, DossiersCommissionsMarche, DossiersEvaluateur, DossiersPiece, DossiersSouscritere, Fournisseur, GarantiesDossier, GarantiesSoumissionnaire, HistoriqueAppelOffresAC, Lot, LotsSoumissionnaire, MembresCommissionsMarche, MonnaieOffre, NaturePrix, NaturesGarantie, ObservateursIndependant, Pays, Piece, PiecesPlisOuverture, PiecesRecus, PlisOuverture, PresenceOuverture, RepresentantServTech, RetraitRegistreDAO, TachesEffectue with dossierms
+clientRootFolder AppelOffre, Attribution, AvisAttribution, CategorieAppelOffre, CatFournisseur, Contrat, Critere, CritereQualifiSoum, Devise, Document, DossierAppelOffre, DossiersCommissionsMarche, DossiersEvaluateur, DossiersPiece, DossiersSouscritere, Fournisseur, GarantiesDossier, GarantiesSoumissionnaire, HistoriqueAppelOffresAC, Lot, LotsSoumissionnaire, MembresCommissionsMarche, MonnaieOffre, NaturePrix, NaturesGarantie, ObservateursIndependant, Pays, Piece, PiecesPlisOuverture, PiecesRecus, PlisOuverture, PresenceOuverture, RepresentantServTech, RetraitRegistreDAO, TachesEffectue with dossierms

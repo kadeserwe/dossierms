@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Devise.
+    -->
+    <changeSet id="20210113100540-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="devise"
+                                 constraintName="fk_devise_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="monnaie_offre_id"
+                                 baseTableName="devise"
+                                 constraintName="fk_devise_monnaie_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="monnaie_offre"/>
+
+    </changeSet>
+</databaseChangeLog>

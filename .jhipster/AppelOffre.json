@@ -1,0 +1,206 @@
+{
+  "name": "AppelOffre",
+  "fields": [
+    {
+      "fieldName": "apoDatecreation",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "apoDateAutorisation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "apoDateDemandeAutorisation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "apoDateRejet",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "apoDateMiseAutorisation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateStopProcedure",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateAffectationDossier",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "apoDatePVOuverturepli",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "apoDateVersement",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datePubListeRestreinte",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "apoProjet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoObjet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoReference",
+      "fieldType": "String",
+      "fieldValidateRules": ["unique", "required"]
+    },
+    {
+      "fieldName": "apoNumeroPretCredit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoCommentaireAutorisation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoFichierMiseAutorisation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroMarche",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "motifStopProcedure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoFichierPV",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoFichierValidation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoAutorisationPrealable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoFichierAutorisationPrealable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoReferenceRequeteAc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoRapportSpecial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoReferenceCommunication",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoReleveConseil",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoFichierRapportSpecial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoFichierReleveConseil",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pubListeRestreinte",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierListeRestreinte",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoMontantEstime",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "apoMontantVersement",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "apoResponsableDCMP",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatSeuil",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "apoStatut",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoValide",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apoNbreDAO",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "apoNbreDC",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "apoEtatValidation",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "autiriteId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "realisationId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "modepassationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "typemarcheId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "modeselectionId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "categorieAppelOffre",
+      "otherEntityRelationshipName": "appelOffre",
+      "relationshipName": "categorieAppelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113095740",
+  "entityTableName": "appel_offre",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

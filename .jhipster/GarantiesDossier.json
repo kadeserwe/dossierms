@@ -1,0 +1,53 @@
+{
+  "name": "GarantiesDossier",
+  "fields": [
+    {
+      "fieldName": "pourcentage",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montant",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "autiriteId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "garantiesDossier",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "garantiesDossier",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "piecesRecus",
+      "otherEntityRelationshipName": "garantiesDossier",
+      "relationshipName": "piecesRecus",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113101340",
+  "javadoc": "TABLE GARANTIE",
+  "entityTableName": "garanties_dossier",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

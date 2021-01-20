@@ -1,0 +1,344 @@
+{
+  "name": "Contrat",
+  "fields": [
+    {
+      "fieldName": "montant",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantVerse",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "conDateSignature",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDateApprobation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDateNotification",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDateRecepProvisoire",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDateRecepDefinitive",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDateOrdreDemarrage",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "condateAttributionProvisoire",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "condateAttributionDefinitive",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDatePaiement",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateDemandeImmatriculation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateImmatriculation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datePub",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateDemandePubContrat",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conDateCreation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateDemandeAutorisation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateautorisation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateDemandeExamenJuridique",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateExamenJuridique",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateDemandeApprobation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateApprobation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateRejet",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "renouvcontDateRetourApprobation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "conCommentSignature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conRefSignature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conRefApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentNotification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conRefNotification",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conFichierRecepProvisoire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentRecepProvisoire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conFichierRecepDefinitive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentRecepDefinitive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conFichierOrdreDemarrage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentOrdreDemarrage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conRefAttributionProvisoire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentaireAttributionProvisoire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conRefAttributionDefinitive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentaireAttributionDefinitive",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conStatut",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numMatriculation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentaireDmdmat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentaireMatriculation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "concSituation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nationnalite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierImmatricule",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierJustificatif",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commentairePub",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fichierContrat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conCommentDemandePub",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierAutorisationPrealable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierExamenJuridique",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierContratSigne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierPageGarde",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierPageSignature",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierRapportMotivation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontFichierProjetContrat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontCommentAutorisation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontCommentDemandeApprobation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "renouvcontCommentExamenJuridique",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autoriteId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "serviceId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "modePassationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "typeMarcheId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "immatriculation",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "delai",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "renouvcontImmatStatut",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "renouvcontPubStatut",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "renouvcontAutorisationStatut",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "renouvcontExamenJuridiqueStatut",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "renouvcontApprobationStatut",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatContratdebase",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libelleLot",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "contrat",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "contrat",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fournisseur",
+      "otherEntityRelationshipName": "contrat",
+      "relationshipName": "fournisseur",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "contrat",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100240",
+  "javadoc": "TABLE CONTRAT",
+  "entityTableName": "contrat",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

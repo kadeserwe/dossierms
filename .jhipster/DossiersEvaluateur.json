@@ -1,0 +1,59 @@
+{
+  "name": "DossiersEvaluateur",
+  "fields": [
+    {
+      "fieldName": "commission",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telephone",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fonction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateRemise",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateLimite",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "dossiersEvaluateur",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100940",
+  "javadoc": "TABLE DossiersEvaluateur",
+  "entityTableName": "dossiers_evaluateur",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

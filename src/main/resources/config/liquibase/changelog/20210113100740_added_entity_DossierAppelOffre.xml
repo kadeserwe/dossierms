@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity DossierAppelOffre.
+    -->
+    <changeSet id="20210113100740-1" author="jhipster">
+        <createTable tableName="dossier_appel_offre">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="dos_lieu_depot_dossier" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_reference" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="ux_dossier_appel_offre_dos_reference" />
+            </column>
+            <column name="dos_adresse_retrait" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_condition_acquistion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_allotissement" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_lot_divisible" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaire_mise_validation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaire_validation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_fichier_validation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaire_publication_provisoire" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaires_publication_definitive" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaire_publication" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_comment_signature" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_ref_signature" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_comment_approbation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_ref_approbation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_debut_retrait" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_limite_depot" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_heurelimitedepot" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_creation" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_rejet" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_publication_provisoire" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_publication_definitive" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_demande_publication" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaire_demande_publication" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_fichier_demande_publication" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_lieu_acquisition_dao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="telecharger_dao" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_ouvertue_desplis" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_heure_ouverture_des_plis" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_publication" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_ficchier_publication" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="autirite_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="dos_montant_garantie" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_montant_dao" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_montant_estime" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_incidents" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_remise_dossier_technique" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_limite_dossier_technique" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="commentaire_delai_technique" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_mise_validation_attribution" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_etat_validation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_bordereau" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_fichier_mise_validation_prequalif" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dosfichier_signature" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_signature" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_mise_validation_signature" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_attribution_definitive" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_demande_approbation" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_comment_demande_approbation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fichier_approbation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_date_notification" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_comment_notification" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_ref_notification" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_fichier_notification" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dos_commentaire_attribution_definitive" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="appel_offre_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210113100740-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210113100740-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/dossier_appel_offre.csv"
+                  separator=";"
+                  tableName="dossier_appel_offre">
+            <column name="id" type="numeric"/>
+            <column name="dos_lieu_depot_dossier" type="string"/>
+            <column name="dos_reference" type="string"/>
+            <column name="dos_adresse_retrait" type="string"/>
+            <column name="dos_condition_acquistion" type="string"/>
+            <column name="dos_allotissement" type="string"/>
+            <column name="dos_lot_divisible" type="string"/>
+            <column name="dos_commentaire_mise_validation" type="string"/>
+            <column name="dos_commentaire_validation" type="string"/>
+            <column name="dos_fichier_validation" type="string"/>
+            <column name="dos_commentaire_publication_provisoire" type="string"/>
+            <column name="dos_commentaires_publication_definitive" type="string"/>
+            <column name="dos_commentaire_publication" type="string"/>
+            <column name="dos_comment_signature" type="string"/>
+            <column name="dos_ref_signature" type="string"/>
+            <column name="dos_comment_approbation" type="string"/>
+            <column name="dos_ref_approbation" type="string"/>
+            <column name="dos_date_debut_retrait" type="date"/>
+            <column name="dos_date_limite_depot" type="date"/>
+            <column name="dos_heurelimitedepot" type="date"/>
+            <column name="dos_date_creation" type="date"/>
+            <column name="dos_date_rejet" type="date"/>
+            <column name="dos_date_publication_provisoire" type="date"/>
+            <column name="dos_date_publication_definitive" type="date"/>
+            <column name="dos_date_demande_publication" type="date"/>
+            <column name="dos_commentaire_demande_publication" type="string"/>
+            <column name="dos_fichier_demande_publication" type="string"/>
+            <column name="dos_lieu_acquisition_dao" type="string"/>
+            <column name="telecharger_dao" type="numeric"/>
+            <column name="dos_date_ouvertue_desplis" type="date"/>
+            <column name="dos_heure_ouverture_des_plis" type="date"/>
+            <column name="dos_date_publication" type="date"/>
+            <column name="dos_ficchier_publication" type="string"/>
+            <column name="autirite_id" type="numeric"/>
+            <column name="dos_montant_garantie" type="numeric"/>
+            <column name="dos_montant_dao" type="numeric"/>
+            <column name="dos_montant_estime" type="numeric"/>
+            <column name="dos_incidents" type="string"/>
+            <column name="date_remise_dossier_technique" type="date"/>
+            <column name="date_limite_dossier_technique" type="date"/>
+            <column name="commentaire_delai_technique" type="string"/>
+            <column name="dos_date_mise_validation_attribution" type="date"/>
+            <column name="dos_etat_validation" type="string"/>
+            <column name="dos_bordereau" type="string"/>
+            <column name="dos_fichier_mise_validation_prequalif" type="string"/>
+            <column name="dosfichier_signature" type="string"/>
+            <column name="dos_date_signature" type="date"/>
+            <column name="dos_date_mise_validation_signature" type="date"/>
+            <column name="dos_date_attribution_definitive" type="date"/>
+            <column name="dos_date_demande_approbation" type="date"/>
+            <column name="dos_comment_demande_approbation" type="string"/>
+            <column name="fichier_approbation" type="string"/>
+            <column name="dos_date_notification" type="date"/>
+            <column name="dos_comment_notification" type="string"/>
+            <column name="dos_ref_notification" type="string"/>
+            <column name="dos_fichier_notification" type="string"/>
+            <column name="dos_commentaire_attribution_definitive" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

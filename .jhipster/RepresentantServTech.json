@@ -1,0 +1,47 @@
+{
+  "name": "RepresentantServTech",
+  "fields": [
+    {
+      "fieldName": "representant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "qualite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "presence",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateConvocation",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "etape",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "representantServTech",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113102940",
+  "javadoc": "TABLE RepresentantsServicesTechnique",
+  "entityTableName": "representant_serv_tech",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Devise",
+  "fields": [
+    {
+      "fieldName": "devTauxConversion",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "devise",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "monnaieOffre",
+      "otherEntityRelationshipName": "devise",
+      "relationshipName": "monnaieOffre",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113100540",
+  "javadoc": "TABLE DEVISE",
+  "entityTableName": "devise",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

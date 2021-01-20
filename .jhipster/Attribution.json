@@ -1,0 +1,101 @@
+{
+  "name": "Attribution",
+  "fields": [
+    {
+      "fieldName": "referencePlandePassation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referenceAvisGeneral",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attributaireProvisoire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commentaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commentaireDefinitif",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomFichierDef",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attriType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montantMarche",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantdefinitif",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "moisExecution",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "semaineExecution",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "joursExecution",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "datePublicationProvisoire",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datePublicationDefinitive",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateattribution",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "attribution",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "plisOuverture",
+      "otherEntityRelationshipName": "attribution",
+      "relationshipName": "plisOuverture",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "attribution",
+      "relationshipName": "lot",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113095840",
+  "javadoc": "TABLE Attribution",
+  "entityTableName": "attribution",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

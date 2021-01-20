@@ -1,0 +1,237 @@
+{
+  "name": "PlisOuverture",
+  "fields": [
+    {
+      "fieldName": "raisonSociale",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresseMail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commentaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rang",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ninea",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "natCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "monCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pvOffreFinanciere",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "negociation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montantOffert",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreFinancier",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "prixEvalue",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreTechniquePondere",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreFinancierPondere",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scoreFinal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantDefinitif",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantTVA",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "montantDouane",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dateDepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heuredepot",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "rabais",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "scoreTechnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "seuilAtteint",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "classemenTechnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "classementGeneral",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "candidatRestreintID",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatPreselection",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "etatExamenPreliminaire",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "critereQualification",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "attributaireProvisoire",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "offreTechnique",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "offreFinanciere",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lettreSoumission",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valide",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numero",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "garantie",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "pieceRequise",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "observationsOffres",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "observationsCandidats",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "modeReception",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notifie",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "signatureOffre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "exhaustivite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "garantieSoumission",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conformite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "critereProvenance",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notePreselectionne",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "autoriteId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ajustement",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "dossierAppelOffre",
+      "otherEntityRelationshipName": "plisOuverture",
+      "relationshipName": "dossierAppelOffre",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "retraitRegistreDAO",
+      "otherEntityRelationshipName": "plisOuverture",
+      "relationshipName": "retraitRegistreDAO",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "fournisseur",
+      "otherEntityRelationshipName": "plisOuverture",
+      "relationshipName": "fournisseur",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210113102740",
+  "javadoc": "TABLE PlisOuverture",
+  "entityTableName": "plis_ouverture",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}

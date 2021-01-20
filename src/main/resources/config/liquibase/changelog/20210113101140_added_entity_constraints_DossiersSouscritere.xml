@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity DossiersSouscritere.
+    -->
+    <changeSet id="20210113101140-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dossier_appel_offre_id"
+                                 baseTableName="dossiers_souscritere"
+                                 constraintName="fk_dossiers_souscritere_dossier_appel_offre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dossier_appel_offre"/>
+
+        <addForeignKeyConstraint baseColumnNames="lot_id"
+                                 baseTableName="dossiers_souscritere"
+                                 constraintName="fk_dossiers_souscritere_lot_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lot"/>
+
+        <addForeignKeyConstraint baseColumnNames="critere_id"
+                                 baseTableName="dossiers_souscritere"
+                                 constraintName="fk_dossiers_souscritere_critere_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="critere"/>
+
+    </changeSet>
+</databaseChangeLog>

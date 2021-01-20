@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity GarantiesSoumissionnaire.
+    -->
+    <changeSet id="20210113101440-1" author="jhipster">
+        <createTable tableName="garanties_soumissionnaire" remarks="TABLE GarantiesSoumissionnaire">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="fournie" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="libelle" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="observations" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="libellelot" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="montant" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dossier_appel_offre_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="garanties_dossier_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="plis_ouverture_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="natures_garantie_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20210113101440-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20210113101440-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/garanties_soumissionnaire.csv"
+                  separator=";"
+                  tableName="garanties_soumissionnaire">
+            <column name="id" type="numeric"/>
+            <column name="fournie" type="string"/>
+            <column name="libelle" type="string"/>
+            <column name="observations" type="string"/>
+            <column name="libellelot" type="string"/>
+            <column name="montant" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

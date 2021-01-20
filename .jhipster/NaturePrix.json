@@ -1,0 +1,27 @@
+{
+  "name": "NaturePrix",
+  "fields": [
+    {
+      "fieldName": "natCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "natLibelle",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210113102040",
+  "javadoc": "TABLE Natureprix",
+  "entityTableName": "nature_prix",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "dossierms",
+  "applications": "*",
+  "microserviceName": "dossierms"
+}
